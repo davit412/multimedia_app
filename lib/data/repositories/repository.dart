@@ -6,4 +6,7 @@ class Repository {
   Repository(this._datasource);
 
   Future<dynamic> getCategories() => _datasource.getCategories();
+
+  Future<dynamic> getCategoryDetails(String url) =>
+      _datasource.getCategoryDetails(url);
 }

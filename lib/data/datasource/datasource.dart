@@ -1,6 +1,4 @@
 import 'package:chopper/chopper.dart';
-import 'package:multimedia_app/data/models/category.model.dart';
-import 'package:multimedia_app/data/models/video.model.dart';
 
 part 'datasource.chopper.dart';
 
@@ -8,6 +6,10 @@ part 'datasource.chopper.dart';
 abstract class Datasource extends ChopperService {
   @GET(path: '/categories-static-home')
   Future<Response<Map<String, dynamic>>> getCategories();
+
+  @GET(path: '{url}')
+  Future<Response<Map<String, dynamic>>> getCategoryDetails(
+      @Path('url') String url);
 
   static Datasource create() {
     final client = ChopperClient(

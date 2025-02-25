@@ -4,22 +4,22 @@ part 'category.model.g.dart';
 
 @JsonSerializable()
 class CategoryModel {
-  final String title;
-  final String key;
-  final String url;
-  final String type;
-  final String image;
+  final String? title;
+  final String? key;
+  final String? url;
+  final String? type;
+  final String? image;
   final int? count;
-  final String categoryType;
+  final String? categoryType;
 
   CategoryModel({
-    required this.title,
-    required this.key,
-    required this.url,
-    required this.type,
-    required this.image,
+    this.title,
+    this.key,
+    this.url,
+    this.type,
+    this.image,
     this.count,
-    required this.categoryType,
+    this.categoryType,
   });
 
   factory CategoryModel.fromJson(Map<String, dynamic> json) =>

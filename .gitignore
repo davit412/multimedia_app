@@ -54,3 +54,7 @@ app.*.map.json
 # fields builds
 *.g.dart
 *.chopper.dart
+
+#vscode
+.vscode/
+.vscode
